@@ -1,0 +1,39 @@
+     <div class="row" ng-controller="forum">
+                  <div class="col-lg-12">
+                      <div class="row mt">
+								<div ng-repeat="cat in forum | orderBy:'d_id'" >
+									<!-- ng-bind-html="pmlist" -->
+											<div class="col-lg-12 col-md-12 col-sm-12 mb">
+
+												<div class="white-panel pn">
+													<div class="white-header">
+													<a href="https://kbve.com/#/cat/#{{cat.sort_id}}">
+													<h5><i class="fa fa-{{cat.icon}}"></i>{{cat.name}} <i class="fa fa-{{cat.icon}}"></i></h5></a>
+													</div>
+													
+														<div class="row">
+														<div ng-repeat="sub in cat.subforum" >
+															<div class="col-md-3">
+															<p>
+																<a href="https://kbve.com/#/cat/#{{sub.id}}">{{sub.name}}</a>
+																</p>
+															</div>
+															<!--
+															<div class="col-md-1">
+																<p>null</p>
+															</div>
+															-->
+															<div class="col-md-8">
+																
+																<p><a href="https://kbve.com/c/index.php?showtopic={{sub.last_id}}&view=getnewpost">{{sub.last_title | cut:true:50:' ...'}}</a> <mute>by: {{sub.last_poster_name | cut:true:16:' ...'}}</mute></p>
+															</div>
+														</div>
+														</div>
+
+												</div>
+											</div>
+					  </div>
+				  </div>
+				
+				
+	  </div>

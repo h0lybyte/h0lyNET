@@ -1,0 +1,32 @@
+
+<iframe id ='myframe' src='https://kbve.com/api/topics/topics.php' onload="onLoadHandler();"></iframe>
+<iframe id ='cat' src='https://kbve.com/api/topics/topics.php' onload=""></iframe>
+
+<script type="text/javascript">
+var intx = 0;
+
+function DASHping()
+{
+	
+	if(intx == 0)
+	{
+	intx++;
+	document.getElementById('myframe').setAttribute('src', 'https://kbve.com/api/forum/stats.php');
+	}
+	if(intx == 1)
+	{
+	
+		for (i = 0; i < 200; i++) { 
+				setTimeout(function(){
+			   
+				document.getElementById('cat').setAttribute('src', 'https://kbve.com/api/forum/sub_topic/sub_topic.php?f_id='+i);
+			}, 1000);
+
+		}
+	
+	}
+}
+function onLoadHandler() {
+	DASHping(intx);
+}
+</script>

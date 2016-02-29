@@ -1,0 +1,34 @@
+<div id="cat"  ng-controller="cat">
+<center>
+<a href="#/forum/"><span class="badge bg-theme"><i class="fa fa-cube"></i> Forum Home</span></a> || 
+<a href="#/cat/#4">4</a> 
+</center>
+	    <div class="col-lg-9">
+                      <div class="row mt">
+								<div ng-repeat="cthread in cat_data track by $index" >
+									<!-- ng-bind-html="pmlist" -->
+											<div class="col-lg-12 col-md-12 col-sm-12 mb">
+
+												<div class="white-panel pn">
+													<div class="white-header">
+													<a href="">'
+													<h5><i class="fa fa-{{cat.icon}}"></i>{{cthread.title}}<i class="fa fa-{{cat.icon}}"></i></h5></a>
+													</div>
+														<div class="desc">
+														<div class="thumb">
+															<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+														</div>
+														<div class="details">
+															<p><a ng-href="https://kbve.com/c/index.php?showtopic={{cthread.tid}}">{{cthread.title}}</a><br/>
+															 <muted>by:  {{cthread.members_display_name}}</muted><br/>
+															</p>
+														</div>
+														</div>
+													
+												</div>
+											</div>
+					  </div>
+				  </div>
+				
+				
+	  </div>
